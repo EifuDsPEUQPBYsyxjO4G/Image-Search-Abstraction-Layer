@@ -1,0 +1,17 @@
+extends layout
+
+block content
+    div(class='container')
+        h1(class='header')=title
+        blockquote
+            p User Stories:
+            ol
+                li I can get the image URLs, alt text and page urls for a set of images relating to a given search string.
+                li I can paginate through the responses by adding a ?offset=2 parameter to the URL.
+                li I can get a list of the most recently submitted search strings.
+
+        h3 Example search:
+        div(class='well well-sm') #{url}/api/imagesearch/lolcats%20funny?offset=10
+        
+        h3 Example history:
+        div(class='well well-sm') #{url}/api/imagesearch/funny%20cats?offset=0
